@@ -1,0 +1,8 @@
+#+CONTENT: showall
+
+** Scripts
+  + Services
+  + Desktop Enviroment
+  + Sound
+  + Fonts
+  + Tools
