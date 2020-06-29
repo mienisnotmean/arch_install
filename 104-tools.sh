@@ -20,7 +20,6 @@ func_install() {
 }
 
 package_list=(
-    git
     emacs
     tmux
     python-pip
