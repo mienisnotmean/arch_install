@@ -48,7 +48,7 @@ for name in "${package_list[@]}" ; do
 done
 
 for name in "${service_list[@]}" ; do
-    tput setaf 3;echo "Enabling " $name " service";tput sgr0;
+    tput setaf 4;echo "Enabling " $name;tput sgr0;
     systemctl enable $name
 done
 
