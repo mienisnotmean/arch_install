@@ -36,6 +36,8 @@ package_list=(
     gnome-terminal
     nautilus
     xdg-user-dirs-gtk
+    evince
+    eog
     papirus-icon-theme
     firefox
     thunderbird
