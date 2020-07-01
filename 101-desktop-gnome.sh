@@ -53,9 +53,6 @@ for name in "${package_list[@]}" ; do
 done
 
 systemctl enable gdm
-git clone https://github.com/dracula/gnome-terminal /home/mien/gnome-terminal
-/home/mien/gnome-terminal/install.sh
-rm -r /home/mien/gnome-terminal
 
 tput setaf 11;
 echo "################################################################"
