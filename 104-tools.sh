@@ -35,6 +35,8 @@ for name in "${package_list[@]}" ; do
     func_install $name
 done
 
+sudo -u mien git clone https://github.com/mienisnotmean/.emacs.d.git
+
 tput setaf 11;
 echo "################################################################"
 echo "# Tools have been installed"
