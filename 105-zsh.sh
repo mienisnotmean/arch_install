@@ -10,4 +10,11 @@ sudo -u mien git clone --depth=1 https://github.com/zsh-users/zsh-completions.gi
 
 sudo -u mien git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git /home/mien/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-cp /home/mien/.oh-my-zsh/templates/zshrc.zsh-template /home/mien/.zshrc
+sudo -u mien cp /home/mien/.oh-my-zsh/templates/zshrc.zsh-template /home/mien/.zshrc
+
+
+tput setaf 11;
+echo "################################################################"
+echo "# Oh-my-zsh have been installed"
+echo "################################################################"
+echo;tput sgr0
