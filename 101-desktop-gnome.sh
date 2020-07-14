@@ -23,7 +23,6 @@ package_list=(
     network-manager-applet
     xorg-server
     xorg-xinit
-    xf86-video-intel
     xorg-server-xwayland
     wayland
     gdm
