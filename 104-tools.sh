@@ -25,6 +25,7 @@ package_list=(
     python-pip
     pycharm-community-edition
     intellij-idea-community-edition
+    net-tools
 )
 
 count=0
