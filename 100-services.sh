@@ -20,22 +20,22 @@ func_install() {
 }
 
 package_list=(
-    acpid
+#    acpid
     avahi
     cronie
     dhcpcd
     networkmanager
-    tlp
+#    tlp
     ufw
 )
 
 service_list=(
-    acpid
+#    acpid
     avahi-daemon
     cronie
     dhcpcd
     NetworkManager
-    tlp
+#    tlp
     ufw
 )
 
