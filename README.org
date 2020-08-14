@@ -1,8 +1,125 @@
-#+CONTENT: showall
+#+STARTUP: showall
 
-** Scripts
-  + Services
-  + Desktop Enviroment
-  + Sound
-  + Fonts
-  + Tools
+* Partitioning
+#+BEGIN_SRC
+  gdisk /dev/sda
+#+END_SRC
+
+* Create file system
+#+BEGIN_SRC
+  mkfs.fat -F 32 -n EFIBOOT /dev/sda1
+  mkfs.ext4 -L ROOT /dev/sda2
+  mkswap -L SWAP /dev/sda3
+#+END_SRC
+
+* Mount
+#+BEGIN_SRC
+  mount -L ROOT /mnt
+  mkdir -p /mnt/boot/efi
+  mount -L EFIBOOT /mnt/boot/efi
+  swapon -L SWAP
+#+END_SRC
+
+* Setup wifi
+#+BEGIN_SRC
+  wifi-menu
+#+END_SRC
+
+* Install base-system
+#+BEGIN_SRC
+  pacstrap /mnt base base-devel linux linux-firmware intel-ucode grub efibootmgr gptfdisk
+                netctl wpa_supplicant dialog zsh vim git
+#+END_SRC
+
+* Generate filesystem table
+#+BEGIN_SRC
+  genfstab -Up /mnt >> /mnt/etc/fstab
+  vim /mnt/etc/fstab
+#+END_SRC
+
+** fstab file content
+#+BEGIN_SRC
+  /dev/sda1   /boot/efi    vfat    umask=0077                   0 2
+  /dev/sda2   /            ext4    defaults,noatime,discard     0 1
+  /dev/sda3   swap         swap    defaults,noatime,discard     0 2
+  tmpfs       /tmp         tmpfs   defaults,noatime,mode=1777   0 0
+#+END_SRC
+
+* Change root
+#+BEGIN_SRC
+  arch-chroot /mnt
+  echo arch > /etc/hostname
+#+END_SRC
+
+* Timezone
+#+BEGIN_SRC
+  ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+  hwclock -w
+#+END_SRC
+
+* Generate local
+#+BEGIN_SRC
+  vim /etc/locale.gen
+  locale-gen
+  echo LANG=en_US.UTF-8 > /etc/locale.conf
+#+END_SRC
+
+* Create Initramfs
+#+BEGIN_SRC
+  mkinitcpio -P
+#+END_SRC
+* Install bootloader
+#+BEGIN_SRC
+  grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArchLinux
+  grub-mkconfig -o /boot/grub/grub.cfg
+  vim /boot/grub/grub.cfg
+#+END_SRC
+
+* Root password
+#+BEGIN_SRC
+  passwd
+#+END_SRC
+
+* Create user
+#+BEGIN_SRC
+  useradd -m -g users -s $(which zsh) mien
+  gpasswd -a mien wheel
+  passwd mien
+  vim /etc/sudoers
+#+END_SRC
+
+* Install packages
+#+BEGIN_SRC
+  git clone https://github.com/mienisnotmean/arch_install.git
+  arch_install/100-services.sh
+  arch_install/101-desktop.sh
+  arch_install/102-sound.sh
+  arch_install/103-fonts.sh
+  arch_install/104-tools.sh
+  arch_install/105-zsh.sh
+
+  rm -r arch_install
+#+END_SRC
+
+* Reboot
+#+BEGIN_SRC
+  exit
+  umount -R /mnt
+  reboot
+#+END_SRC
+
+* Install trizen
+#+BEGIN_SRC
+  git clone https://aur.archlinux.org/trizen.git
+  cd trizen
+  makepkg -si
+#+END_SRC
+
+* Install dracula theme
+#+BEGIN_SRC
+  trizen -S ant-dracula-gtk-theme
+
+  git clone https://github.com/dracula/gnome-terminal
+  gnome-terminal/install.sh
+  rm -r gnome-terminal
+#+END_SRC
