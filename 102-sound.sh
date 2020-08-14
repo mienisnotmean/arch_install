@@ -30,7 +30,6 @@ package_list=(
     gst-plugins-bad
     gst-plugins-base
     gst-plugins-ugly
-    playerctl
 )
 
 count=0
