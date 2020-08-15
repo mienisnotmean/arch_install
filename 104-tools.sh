@@ -36,8 +36,6 @@ for name in "${package_list[@]}" ; do
 done
 
 sudo -u mien git clone https://github.com/mienisnotmean/.emacs.d.git /home/mien/.emacs.d
-sudo -u mien mkdir /home/mien/Documents/org/
-sudo -u mien touch /home/mien/Documents/org/todo.org
 
 tput setaf 11;
 echo "################################################################"
