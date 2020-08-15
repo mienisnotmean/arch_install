@@ -26,4 +26,4 @@ passwd
 useradd -m -g users -s $(which zsh) mien
 gpasswd -a mien wheel
 passwd mien
-sed -i '/%wheel ALL=(ALL) ALL/s/^# //g' script.sh
+sed -i '/%wheel ALL=(ALL) ALL/s/^# //g' /etc/sudoers
