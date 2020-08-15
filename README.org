@@ -27,7 +27,7 @@
 
 * Install base-system
 #+BEGIN_SRC
-  pacstrap /mnt base base-devel linux linux-firmware intel-ucode grub efibootmgr gptfdisk
+  pacstrap /mnt base base-devel linux linux-firmware intel-ucode amd-ucode os-prober grub efibootmgr gptfdisk
                 netctl wpa_supplicant dialog zsh vim git
 #+END_SRC
 
@@ -106,6 +106,13 @@
   exit
   umount -R /mnt
   reboot
+#+END_SRC
+
+* Dualboot windows
+** Mount windows efi partition
+#+BEGIN_SRC
+  mount /dev/sda1 /mnt
+  grub-mkconfig -o /boot/grub/grub.cfg
 #+END_SRC
 
 * Install trizen
