@@ -1,5 +1,6 @@
 #!/bin/bash
 
+./099-system.sh
 ./100-services.sh
 ./101-desktop-gnome.sh
 ./102-sound.sh
