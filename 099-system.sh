@@ -8,7 +8,7 @@ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock -w
 
 # Generate locale
-sed -i '/en_US.UTF-8/s/^# //g' script.sh
+sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 
