@@ -28,7 +28,7 @@ package_list=(
 
 count=0
 
-sudo -u mien git clone https://github.com/ohmyzsh/ohmyzsh.git /home/mien/.config/.oh-my-zsh
+sudo -u mien git clone https://github.com/ohmyzsh/ohmyzsh.git /home/mien/.oh-my-zsh
 
 for name in "${package_list[@]}" ; do
     count=$[count+1]
