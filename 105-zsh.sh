@@ -36,8 +36,7 @@ for name in "${package_list[@]}" ; do
     func_install $name
 done
 
-sudo -u mien cp /home/mien/.oh-my-zsh/templates/zshrc.zsh-template /home/mien/.zshrc
-
+sudo -u mien cp dotfiles/.zshrc /home/mien/config/.zshrc
 
 tput setaf 11;
 echo "################################################################"
