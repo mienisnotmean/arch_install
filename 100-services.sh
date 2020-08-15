@@ -52,9 +52,9 @@ for name in "${service_list[@]}" ; do
     systemctl enable $name
 done
 
-sudo -u mien ufw default deny
-sudo -u mien ufw allow from 192.168.0.0/24
-sudo -u mien ufw enable
+ufw default deny
+ufw allow from 192.168.0.0/24
+ufw enable
 
 tput setaf 11;
 echo "################################################################"
