@@ -13,5 +13,6 @@ git clone https://github.com/dracula/gnome-terminal
 gnome-terminal/install.sh
 rm -rf gnome-terminal
 
-sudo ufw deny default
+sudo ufw default deny
+sudo ufw allow from 192.168.0.0/24
 sudo ufw enable
