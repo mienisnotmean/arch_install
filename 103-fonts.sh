@@ -29,7 +29,6 @@ package_list=(
     ttf-hack
     ttf-roboto
     ttf-dejavu
-    ttf-droid
 )
 
 count=0
