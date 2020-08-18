@@ -53,7 +53,6 @@ for name in "${service_list[@]}" ; do
 done
 
 ufw default deny
-ufw allow from 192.168.0.0/24
 ufw enable
 
 tput setaf 11;
