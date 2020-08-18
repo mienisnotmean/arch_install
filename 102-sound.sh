@@ -26,10 +26,6 @@ package_list=(
     alsa-lib
     alsa-plugins
     alsa-utils
-    gst-plugins-good
-    gst-plugins-bad
-    gst-plugins-base
-    gst-plugins-ugly
 )
 
 count=0
