@@ -41,6 +41,7 @@ package_list=(
     firefox
     thunderbird
     libreoffice-fresh
+    libreoffice-fresh-de
     ntfs-3g
 )
 
