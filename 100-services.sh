@@ -52,9 +52,6 @@ for name in "${service_list[@]}" ; do
     systemctl enable $name
 done
 
-ufw default deny
-ufw enable
-
 tput setaf 11;
 echo "################################################################"
 echo "# Services have been installed"
