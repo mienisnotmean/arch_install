@@ -21,6 +21,7 @@ func_install() {
 
 package_list=(
     emacs
+    npm
     python-pip
     pycharm-community-edition
     intellij-idea-community-edition
