@@ -43,6 +43,8 @@ package_list=(
     libreoffice-fresh
     libreoffice-fresh-de
 #    ntfs-3g
+    keepassxc
+
 )
 
 count=0

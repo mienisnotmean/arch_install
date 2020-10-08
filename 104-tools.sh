@@ -24,7 +24,6 @@ package_list=(
     npm
     python-pip
     net-tools
-    keepassxc
     go
     terraform
     kubernetes
