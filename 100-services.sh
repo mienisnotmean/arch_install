@@ -20,22 +20,25 @@ func_install() {
 }
 
 package_list=(
-#    acpid
+    acpid
     avahi
     cronie
     dhcpcd
+    docker
+    docker-compose
     networkmanager
-#    tlp
+    tlp
     ufw
 )
 
 service_list=(
-#    acpid
+    acpid
     avahi-daemon
     cronie
     dhcpcd
+    docker
     NetworkManager
-#    tlp
+    tlp
     ufw
 )
 
