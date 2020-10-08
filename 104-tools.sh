@@ -23,9 +23,12 @@ package_list=(
     emacs
     npm
     python-pip
-    pycharm-community-edition
-    intellij-idea-community-edition
     net-tools
+    keepassxc
+    go
+    terraform
+    kubernetes
+    minikube
 )
 
 count=0
