@@ -21,13 +21,10 @@ func_install() {
 
 package_list=(
     emacs
-    npm
     python-pip
     net-tools
     go
-    terraform
-    kubernetes
-    minikube
+    rustup
 )
 
 count=0
