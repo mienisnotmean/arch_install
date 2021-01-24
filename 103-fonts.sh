@@ -21,7 +21,7 @@ func_install() {
 
 package_list=(
     noto-fonts
-    noto-fonts-cfk
+    noto-fonts-cjk
     noto-fonts-emoji
     noto-fonts-extra
     awesome-terminal-fonts
