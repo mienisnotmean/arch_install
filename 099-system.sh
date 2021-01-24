@@ -32,7 +32,7 @@ useradd -m -g users -s $(which zsh) mien
 gpasswd -a mien wheel
 tput setaf 11;
 echo "################################################################"
-echo "# Enter root password:"
+echo "# Enter user password:"
 echo "################################################################"
 echo;tput sgr0
 passwd mien
