@@ -23,8 +23,8 @@ package_list=(
     network-manager-applet
     xorg-server
     xorg-xinit
-    xf86-video-intel
-#    xf86-video-amdgpu
+#    xf86-video-intel
+    xf86-video-amdgpu
     xorg-server-xwayland
     wayland
     gdm
@@ -42,7 +42,7 @@ package_list=(
     thunderbird
     libreoffice-fresh
     libreoffice-fresh-de
-#    ntfs-3g
+    ntfs-3g
     keepassxc
 
 )
