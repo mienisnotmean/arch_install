@@ -20,7 +20,7 @@ func_install() {
 }
 
 package_list=(
-    acpid
+#    acpid
     avahi
     cronie
  #   dhcpcd
@@ -32,7 +32,7 @@ package_list=(
 )
 
 service_list=(
-    acpid
+ #   acpid
     avahi-daemon
     cronie
   #  dhcpcd
