@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#sudo mount /dev/sda1 /mnt
-#sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo mount /dev/sda1 /mnt
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 git clone https://aur.archlinux.org/trizen.git
 (cd trizen && makepkg -si)
