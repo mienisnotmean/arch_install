@@ -35,7 +35,7 @@ for name in "${package_list[@]}" ; do
     func_install $name
 done
 
-sudo -u mien git clone https://github.com/mienisnotmean/.emacs.d.git /home/mien/.emacs.d
+sudo -u mien git clone https://github.com/mthaithanh/.emacs.d.git /home/mien/.emacs.d
 
 tput setaf 11;
 echo "################################################################"
