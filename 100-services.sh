@@ -23,7 +23,7 @@ package_list=(
 #    acpid
     avahi
     cronie
- #   dhcpcd
+#   dhcpcd
     docker
     docker-compose
     networkmanager
@@ -32,13 +32,13 @@ package_list=(
 )
 
 service_list=(
- #   acpid
+#   acpid
     avahi-daemon
     cronie
-  #  dhcpcd
+#  dhcpcd
     docker
     NetworkManager
-    tlp
+#    tlp
     ufw
 )
 
