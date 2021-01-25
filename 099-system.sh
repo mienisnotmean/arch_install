@@ -13,6 +13,7 @@ locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 
 # Create initramfs
+sed -i 's/MODULES=()/MODULES=(amdgpu)/g' /etc/mkinitcpio.conf
 mkinitcpio -P
 
 # Install bootloader
