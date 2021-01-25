@@ -55,7 +55,7 @@ for name in "${package_list[@]}" ; do
     func_install $name
 done
 
-systemctl enable gdm
+systemctl enable gdm.service
 
 tput setaf 11;
 echo "################################################################"
